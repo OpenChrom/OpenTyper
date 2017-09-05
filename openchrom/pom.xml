@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright (c) 2012, 2016 Dr. Philip Wenig.
+  Copyright (c) 2012, 2017 Lablicate GmbH.
 
   All rights reserved.
   This program and the accompanying materials are made available under the
@@ -8,7 +8,7 @@
   and is available at http://www.eclipse.org/legal/epl-v10.html
  
   Contributors:
-     Dr. Philip Wenig - created the pom to build the plug-ins
+  Dr. Philip Wenig - created the pom to build the plug-ins
 -->
 <project
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
@@ -29,8 +29,8 @@
   --> 
   <properties>
     <!-- VERSIONS -->
-    <tycho.version>0.24.0</tycho.version>
-    <tycho-extras.version>0.24.0</tycho-extras.version>
+    <tycho.version>1.0.0</tycho.version>
+    <tycho-extras.version>1.0.0</tycho-extras.version>
     <pmd.version>2.7.1</pmd.version>
     <checkstyle.version>2.9.1</checkstyle.version>
     <!-- IDS -->
@@ -39,20 +39,17 @@
     <maven.groupid>org.apache.maven.plugins</maven.groupid>
     <!-- REPOSITORY URLS -->
     <tycho-repo.url>https://oss.sonatype.org/content/groups/public</tycho-repo.url>
-    <mars-repo.url>http://download.eclipse.org/releases/mars</mars-repo.url>
-    <mars-updates-repo.url>http://download.eclipse.org/eclipse/updates/4.5</mars-updates-repo.url>
+    <neon-repo.url>http://download.eclipse.org/releases/neon</neon-repo.url>
+    <neon-updates-repo.url>http://download.eclipse.org/eclipse/updates/4.6</neon-updates-repo.url>
     <jetty-repo.url>http://download.eclipse.org/jetty/updates/jetty-bundles-8.x</jetty-repo.url>
-    <egit-repo.url>http://download.eclipse.org/egit/updates</egit-repo.url>
-    <e4-tools.url>http://download.eclipse.org/e4/downloads/drops/S-0.17-201501051100/repository</e4-tools.url>
-    <orbit-repo.url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160221192158/repository</orbit-repo.url>
-    <ecf-repo.url>http://download.eclipse.org/rt/ecf/3.12.0/site.p2</ecf-repo.url>
+    <orbit-repo.url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository</orbit-repo.url>
     <nebula-repo.url>http://download.eclipse.org/technology/nebula/snapshot</nebula-repo.url>
-    <nattable-repo.url>http://download.eclipse.org/nattable/releases/1.3.0/repository</nattable-repo.url>
     <pydev-repo.url>http://pydev.org/updates</pydev-repo.url>
+    <nattable-repo.url>http://download.eclipse.org/nattable/releases/1.4.0/repository</nattable-repo.url>
     <ease-repo.url>http://download.eclipse.org/ease/update/release</ease-repo.url>
-    <easejython-repo.url>https://dl.bintray.com/pontesegger/ease-jython</easejython-repo.url>
-    <knime-repo.url>http://update.knime.org/analytics-platform/3.1</knime-repo.url>
-    <efxclipse-repo.url>http://download.eclipse.org/efxclipse/updates-released/2.1.0/site</efxclipse-repo.url>
+    <knime-repo.url>http://update.knime.org/analytics-platform/3.3</knime-repo.url>
+    <efxclipse-repo.url>http://download.eclipse.org/efxclipse/updates-released/2.4.0/site</efxclipse-repo.url>
+    <egit-repo.url>http://download.eclipse.org/egit/updates</egit-repo.url>
     <!-- ENCODING -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -61,13 +58,13 @@
   -->
   <repositories>
     <repository>
-      <id>mars</id>
-      <url>${mars-repo.url}</url>
+      <id>neon</id>
+      <url>${neon-repo.url}</url>
       <layout>p2</layout>
     </repository>
     <repository>
-      <id>mars-updates</id>
-      <url>${mars-updates-repo.url}</url>
+      <id>neon-updates</id>
+      <url>${neon-updates-repo.url}</url>
       <layout>p2</layout>
     </repository>
     <repository>
@@ -76,23 +73,8 @@
       <layout>p2</layout>
     </repository>
     <repository>
-      <id>egit</id>
-      <url>${egit-repo.url}</url>
-      <layout>p2</layout>
-    </repository>
-    <repository>
-      <id>e4-tools</id>
-      <url>${e4-tools.url}</url>
-      <layout>p2</layout>
-    </repository>
-    <repository>
       <id>orbit</id>
       <url>${orbit-repo.url}</url>
-      <layout>p2</layout>
-    </repository>
-    <repository>
-      <id>ecf</id>
-      <url>${ecf-repo.url}</url>
       <layout>p2</layout>
     </repository>
     <repository>
@@ -101,23 +83,18 @@
       <layout>p2</layout>
     </repository>
     <repository>
-      <id>nattable</id>
-      <url>${nattable-repo.url}</url>
-      <layout>p2</layout>
-    </repository>
-    <repository>
       <id>pydev</id>
       <url>${pydev-repo.url}</url>
       <layout>p2</layout>
     </repository>
     <repository>
-      <id>ease</id>
-      <url>${ease-repo.url}</url>
+      <id>nattable</id>
+      <url>${nattable-repo.url}</url>
       <layout>p2</layout>
     </repository>
     <repository>
-      <id>easejython</id>
-      <url>${easejython-repo.url}</url>
+      <id>ease</id>
+      <url>${ease-repo.url}</url>
       <layout>p2</layout>
     </repository>
     <repository>
@@ -128,6 +105,11 @@
     <repository>
       <id>efxclipse</id>
       <url>${efxclipse-repo.url}</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>egit</id>
+      <url>${egit-repo.url}</url>
       <layout>p2</layout>
     </repository>
   </repositories>
@@ -176,7 +158,14 @@
             <type>eclipse-plugin</type>
             <id>org.eclipse.jdt.core</id>
             <restrictTo>
-              <version>3.11.2.v20160128-0629</version>
+              <version>3.12.3.v20170228-1205</version>
+            </restrictTo>
+            </filter>
+            <filter>
+            <type>eclipse-plugin</type>
+            <id>com.ibm.icu</id>
+            <restrictTo>
+              <version>56.1.0.v201601250100</version>
             </restrictTo>
             </filter>
           </filters>
@@ -205,11 +194,6 @@
               <os>macosx</os>
               <ws>cocoa</ws>
               <arch>x86_64</arch>
-            </environment>
-            <environment>
-              <os>solaris</os>
-              <ws>gtk</ws>
-              <arch>x86</arch>
             </environment>
           </environments>
         </configuration>
