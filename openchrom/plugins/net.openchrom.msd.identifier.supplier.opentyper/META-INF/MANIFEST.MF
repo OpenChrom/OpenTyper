@@ -5,6 +5,10 @@ Bundle-SymbolicName: net.openchrom.msd.identifier.supplier.opentyper
 Bundle-Version: 1.2.0.qualifier
 Bundle-Activator: net.openchrom.msd.identifier.supplier.opentyper.Activator
 Bundle-Vendor: OpenChrom
-Require-Bundle: org.eclipse.core.runtime
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.chemclipse.chromatogram.msd.process.supplier.batchprocess,
+ org.eclipse.chemclipse.converter
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
+Export-Package: net.openchrom.msd.identifier.supplier.opentyper.io,
+ net.openchrom.msd.identifier.supplier.opentyper.model
