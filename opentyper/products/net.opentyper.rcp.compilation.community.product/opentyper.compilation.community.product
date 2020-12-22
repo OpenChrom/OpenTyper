@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="OpenTyper Analytics Edition" uid="net.opentyper.rcp.compilation.community.product.id" id="net.opentyper.rcp.compilation.community.ui.product" application="org.eclipse.chemclipse.rcp.app.ui.org.eclipse.chemclipse.rcp.application" version="1.4.0.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/net.opentyper.rcp.compilation.community.ui/icons/about_250x330.png"/>
+      <text>
+         OpenTyper Analytics Edition - the open source software for MALDI-TOF MS
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-clearPersistedState
+      </programArgs>
+      <programArgsLin>--launcher.GTK_version
+2
+      </programArgsLin>
+      <vmArgs>-Xms512M
+-Xmx1024M
+-Dosgi.framework.extensions=org.eclipse.fx.osgi
+-Dapplication.name=OpenTyper_Analytics_Edition
+-Dapplication.version=1.4.x
+-Denable.cli.support=false
+-Dosgi.instance.area=@user.home/OpenTyper/1.4.x
+-Dosgi.user.area=@user.home/.opentyper/1.4.x
+-Dorg.eclipse.update.reconcile=false
+-Dapplication.perspective=net.openchrom.msd.identifier.supplier.opentyper.ui.perspective.opentyper
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <splash
+      location="net.opentyper.rcp.compilation.community.ui" />
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+
+   <vm>
+   </vm>
+
+   <license>
+        <url>http://www.opentyper.net</url>
+        <text>
+   Copyright (c) 2020 Lablicate GmbH.
+
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+	Dr. Philip Wenig - initial API and implementation
+	Matthias Mailänder - initial API and implementation
+         </text>
+   </license>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="net.openchrom.jre.feature"/>
+      <feature id="net.opentyper.platform.feature"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="4" />
+      <property name="org.eclipse.update.reconcile" value="false" />
+      <property name="osgi.requiredJavaVersion" value="1.8" />
+      <property name="sun.awt.xembedserver" value="true" />
+   </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+      <file path="/org.eclipse.chemclipse.rcp.app.ui/css/chemclipse.css"/>
+   </cssInfo>
+
+</product>

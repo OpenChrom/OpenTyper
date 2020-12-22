@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.chemclipse.rcp.app.ui.org.eclipse.chemclipse.rcp.application"
+            name="OpenTyper Analytics Edition">
+         <property
+               name="aboutText"
+               value="OpenTyper Analytics Edition - the open source software for MALDI-TOF MS">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/about_250x330.png">
+         </property>
+         <property
+               name="appName"
+               value="OpenTyper Analytics Edition">
+         </property>
+         <property
+               name="applicationXMI"
+               value="org.eclipse.chemclipse.rcp.app.ui/Application.e4xmi">
+         </property>
+         <property
+               name="applicationCSS"
+               value="/org.eclipse.chemclipse.rcp.app.ui/css/chemclipse.css">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.splashHandlers">
+      <splashHandler
+            class="net.opentyper.rcp.compilation.community.ui.splash.EnhancedSplashHandler"
+            id="net.opentyper.rcp.compilation.community.ui.splash.enhancedSplashHandler">
+      </splashHandler>         
+      <splashHandlerProductBinding
+            productId="net.opentyper.rcp.compilation.community.ui.product"
+            splashId="net.opentyper.rcp.compilation.community.ui.splash.enhancedSplashHandler">
+      </splashHandlerProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="net.opentyper.rcp.compilation.community.ui.PluginStartup"></startup>
+   </extension>
+</plugin>

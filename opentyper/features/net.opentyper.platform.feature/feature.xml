@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.opentyper.platform.feature"
+      label="OpenTyper Platform"
+      version="1.4.0.qualifier">
+
+   <includes
+         id="org.eclipse.chemclipse.rcp.app.core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="net.opentyper.rcp.compilation.community.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="net.openchrom.msd.converter.supplier.bruker.flex"
+         version="0.0.0"/>
+
+   <includes
+         id="net.openchrom.msd.identifier.supplier.opentyper.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="net.openchrom.msd.identifier.supplier.opentyper.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="net.opentyper.rcp.app.compilation.core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="net.opentyper.rcp.compilation.community.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="net.openchrom.platform.feature"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.chemclipse.support.ui" version="0.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.ui.model.workbench" version="1.1.0.v20140512-1820" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.chemclipse.ux.extension.msd.ui" version="0.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.chemclipse.rcp.app.ui" version="0.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.ui.workbench"/>
+      <import plugin="org.eclipse.chemclipse.support"/>
+      <import plugin="org.eclipse.chemclipse.rcp.ui.icons"/>
+      <import plugin="org.eclipse.chemclipse.ux.extension.ui"/>
+      <import plugin="org.eclipse.core.filesystem"/>
+      <import plugin="org.eclipse.e4.ui.di"/>
+      <import plugin="org.eclipse.e4.core.services"/>
+      <import plugin="org.eclipse.chemclipse.chromatogram.msd.identifier"/>
+      <import plugin="org.eclipse.ui.navigator" version="3.6.101" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.chemclipse.msd.swt.ui"/>
+      <import plugin="org.eclipse.chemclipse.msd.model"/>
+      <import plugin="org.eclipse.chemclipse.logging"/>
+      <import plugin="org.eclipse.chemclipse.xxd.process" version="0.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.chemclipse.processing" version="0.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.chemclipse.ux.extension.xxd.ui" version="0.9.0" match="greaterOrEqual"/>
+      <import plugin="javax.annotation"/>
+      <import plugin="org.eclipse.osgi.services"/>
+      <import plugin="org.eclipse.ui" version="3.105.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.forms" version="3.5.200" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.intro" version="3.4.200" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.intro.universal" version="3.2.600" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.ui.workbench" version="0.10.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.chemclipse.rcp.ui.icons" version="0.8.0" match="greaterOrEqual"/>
+      <import plugin="javax.inject" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.commands" version="0.10.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.di" version="1.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.services" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.chemclipse.logging" version="0.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.chemclipse.logging.ui" version="0.8.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="net.openchrom.msd.identifier.supplier.opentyper"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.openchrom.msd.identifier.supplier.opentyper.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.opentyper.rcp.compilation.community.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
